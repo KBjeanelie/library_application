@@ -21,23 +21,26 @@ class _HomePageState extends State<HomePage> {
   bool isLoading = true;
   void fetchData() async{
     try {
-      http.Response response = await http.get(Uri.parse(api));
-      var categories_data = jsonDecode(response.body);
-      categories_data.forEach((cat){
-        categories.add(Category(id: cat['id'],
-         label: cat['label'],
-         created_at: cat['created_at'],
-         updated_at: cat['updated_at'])
-        );
-      });
-      setState(() {
-        if (categories.isEmpty) {
-          isLoading = true;
-        }else{
-          isLoading = false;
-        }
-      });
       
+        http.Response response = await http.get(Uri.parse(get_category_path));
+        
+        var categories_data = jsonDecode(response.body);
+
+        categories_data.forEach((cat){
+          categories.add(Category(id: cat['id'],
+          label: cat['label'],
+          created_at: cat['created_at'],
+          updated_at: cat['updated_at'])
+          );
+        });
+        setState(() {
+          if (categories.isEmpty) {
+            isLoading = true;
+          }else{
+            isLoading = false;
+          }
+        });
+
     } catch (e) {
       print("This error is $e");
     }
@@ -74,10 +77,10 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => const AddBookForm()),
-          // );
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) =>  AddDogFormPage()),
+          );
         },
         backgroundColor: const Color(0xFF001133),
         label: const Text('Add'),
