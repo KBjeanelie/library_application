@@ -13,7 +13,7 @@ class _AddDogFormPageState extends State<AddDogFormPage> {
     // new page needs scaffolding!
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add a new Dog'),
+        title: const Text('Ajouter un nouveau Livre'),
         backgroundColor: Colors.black87,
       ),
       body: Container(
@@ -25,31 +25,18 @@ class _AddDogFormPageState extends State<AddDogFormPage> {
           ),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                // Text Field is the basic input widget for Flutter.
-                // It comes built in with a ton of great UI and
-                // functionality, such as the labelText field you see below.
-                child: TextField(
-                    decoration: InputDecoration(
-                  labelText: 'Name the Pup',
-                )),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: TextField(
-                    decoration: InputDecoration(
-                  labelText: "Pup's location",
-                )),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: 'All about the pup',
-                  ),
-                ),
-              ),
+              // const Padding(
+              //   padding: EdgeInsets.only(bottom: 8.0),
+              //   // Text Field is the basic input widget for Flutter.
+              //   // It comes built in with a ton of great UI and
+              //   // functionality, such as the labelText field you see below.
+              //   child: TextField(
+              //     decoration: const InputDecorator(
+              //       border: 
+              //     ),
+              //   ),
+              // ),
+              
               // A Strange situation.
               // A piece of the app that you'll add in the next
               // section *needs* to know its context,
@@ -66,7 +53,7 @@ class _AddDogFormPageState extends State<AddDogFormPage> {
                       // this is my goto temporary callback.
                       onPressed: () => print('PRESSED'),
                       //color: Colors.indigoAccent,
-                      child: Text('Submit Pup'),
+                      child: const Text('Submit Pup'),
                     );
                   },
                 ),
