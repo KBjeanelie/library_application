@@ -1,19 +1,6 @@
 import 'package:flutter/material.dart';
 
 
-class SettingsUI extends StatelessWidget {
-  const SettingsUI({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Setting UI",
-      home: EditProfilePage(),
-    );
-  }
-}
-
 class EditProfilePage extends StatefulWidget {
   const EditProfilePage({super.key});
 
