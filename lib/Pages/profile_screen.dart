@@ -16,10 +16,11 @@ class ProfileScreen extends StatelessWidget {
           onPressed: () {  },
         ),
       ),
-      body: Column(
+      body: ListView(
         children: [
           const ProfilePicture(),
           const SizedBox(height: 10,),
+          const textProfileManage(text: "Gérer mon compte"),
           ProfileMenuWidget(
             text: "Informations personnelles",
             icon: Icons.person,
@@ -30,6 +31,8 @@ class ProfileScreen extends StatelessWidget {
             icon: Icons.notifications_active,
             press: (){}
           ),
+          const SizedBox(height: 20,),
+          const textProfileManage(text: "Informations utiles"),
           ProfileMenuWidget(
             text: "Paramètre",
             icon: Icons.settings,
@@ -50,12 +53,57 @@ class ProfileScreen extends StatelessWidget {
             icon: Icons.work,
             press: (){}
           ),
+          const SizedBox(height: 20,),
+          const textProfileManage(text: "Autres"),
+          ProfileMenuWidget(
+            text: "À propos",
+            icon: Icons.info_rounded,
+            press: (){}
+          ),
           ProfileMenuWidget(
             text: "Se déconnecter",
             icon: Icons.logout,
             press: (){}
           ),
+          const AboutVersionApp()
         ]
+      ),
+    );
+  }
+}
+
+class AboutVersionApp extends StatelessWidget {
+  const AboutVersionApp({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(30),
+      child: Column(
+        children: const [
+          Text("Oppus", style: TextStyle(color: Colors.black54, fontSize: 13,)),
+          Text("v1.1.1.101", style: TextStyle(color: Colors.black54, fontSize: 13,))
+        ],
+      ),
+    );
+  }
+}
+
+// ignore: camel_case_types
+class textProfileManage extends StatelessWidget {
+  const textProfileManage({
+    Key? key, required this.text,
+  }) : super(key: key);
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return  Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 35),
+      child: Text(
+        text,
+        style:  const TextStyle(color: Colors.black54, fontSize: 15,)
       ),
     );
   }
@@ -84,8 +132,14 @@ class ProfileMenuWidget extends StatelessWidget {
               color: Colors.blue,),
             const SizedBox(width: 20,),
             Expanded(
-              child: Text(text,
-              style: const TextStyle(color: Colors.black, fontSize: 15),),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                 children: [
+                  Text(text,
+                  style: const TextStyle(color: Colors.black, fontSize: 15,)),
+                  const SizedBox(height: 10,),
+                  const Divider(height: 1, thickness: 2,)
+                ],
+              )
             )
           ],
         ),
