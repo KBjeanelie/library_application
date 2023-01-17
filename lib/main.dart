@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:library_application/Pages/home_pages.dart';
 import 'package:library_application/Pages/notification.dart';
 import 'package:library_application/Pages/profile_info.dart';
 import 'package:library_application/Pages/profile_screen.dart';
+import 'package:library_application/Pages/search.dart';
 
 
 void main() {
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: EditProfilePage(),
+      home: SearchWorkerView(),
     );
   }
 }

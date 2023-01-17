@@ -34,3 +34,4 @@ class Book {
     required this.updated_at
   });
 }
+
