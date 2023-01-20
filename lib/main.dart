@@ -3,6 +3,7 @@ import 'package:library_application/Pages/home_pages.dart';
 import 'package:library_application/Pages/notification.dart';
 import 'package:library_application/Pages/profile_info.dart';
 import 'package:library_application/Pages/profile_screen.dart';
+import 'package:library_application/Pages/profile_worker_view.dart';
 import 'package:library_application/Pages/search.dart';
 
 
