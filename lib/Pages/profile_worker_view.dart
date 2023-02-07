@@ -101,6 +101,7 @@ class ProfilePictureWorker extends StatelessWidget {
                 ],
               ),
             ),
+            
             const Padding(
               padding: EdgeInsets.only(top: 10),
               child: Text("Elijah Walter",

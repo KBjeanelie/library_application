@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'card.dart';
+
 class CardsView extends StatefulWidget {
   const CardsView({super.key});
 
@@ -11,9 +13,10 @@ class _CardsViewState extends State<CardsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 240, 240, 240),
       appBar: AppBar(title: const Text('cards')),
       body: Column(
-        children: [],
+        children: [cardOffer(), cardOffer(), cardOffer()],
       ),
     );
   }
