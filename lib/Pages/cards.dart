@@ -16,7 +16,7 @@ class _CardsViewState extends State<CardsView> {
       backgroundColor: Color.fromARGB(255, 240, 240, 240),
       appBar: AppBar(title: const Text('cards')),
       body: Column(
-        children: [cardOffer(), cardOffer(), cardOffer()],
+        children: [comentCard(context)],
       ),
     );
   }

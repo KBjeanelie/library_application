@@ -23,8 +23,8 @@ class ProfileWorkerView extends StatelessWidget {
             TabBar(
               labelColor: Colors.black,
               tabs: [
-                Tab(icon: Icon(Icons.directions_car)),
-                Tab(icon: Icon(Icons.directions_transit)),
+                Tab(text: "À propos",),
+                Tab(text: "Portofolio",),
               ],
             ),
             Expanded(
@@ -35,24 +35,6 @@ class ProfileWorkerView extends StatelessWidget {
                 ],
               ),
             ),
-            // Container(
-            //   padding: const EdgeInsets.all(16),
-            //   child: Column(
-            //     crossAxisAlignment: CrossAxisAlignment.start,
-            //     children: [
-            //       const Text("Maçon", style: TextStyle(color: Colors.grey, fontSize: 20)),
-            //       Row(
-            //         children:const [
-            //           Icon(Icons.backpack, color: Color.fromARGB(255, 167, 30, 20),),
-            //           Padding(
-            //             padding: EdgeInsets.only(left: 5),
-            //             child: Text("5 à 9 d'expériences", style: TextStyle(color: Colors.black87),),
-            //           )
-            //         ],
-            //       )
-            //     ],
-            //   ),
-            // ),
           ],
         ),
       ),

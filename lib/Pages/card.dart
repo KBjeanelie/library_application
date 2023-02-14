@@ -7,16 +7,16 @@ Container certifyWorker(){
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
       color: Colors.blue,),
-    child: Row(
-      children: const [
-        Icon(Icons.verified, size: 15, color: Colors.white,),
-        Padding(
-          padding: EdgeInsets.only(left: 5),
-          child: Text("Ouvrier certifier et vérifier", style: TextStyle(color: Colors.white),),
-        )
-      ],
-    ),
-  );
+      child: Row(
+        children: const [
+          Icon(Icons.verified, size: 15, color: Colors.white,),
+          Padding(
+            padding: EdgeInsets.only(left: 5),
+            child: Text("Ouvrier certifier et vérifier", style: TextStyle(color: Colors.white),),
+          )
+        ],
+      ),
+    );
 }
 
 Container verifyWorker(){
@@ -120,6 +120,56 @@ Container cardOffer (){
             ],
           ),
         )
+      ],
+    ),
+  );
+}
+
+
+
+Container comentCard (BuildContext context){
+  return Container(
+    margin: const EdgeInsets.only(top: 10, bottom: 10),
+    padding: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+    color: Colors.white,
+    child: Column(
+      children: [
+        Row(
+          children: [
+            Row(
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  width: MediaQuery.of(context).size.height * 0.07,
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children:const [
+                       CircleAvatar(backgroundColor: Colors.grey),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.height * 0.48,
+                  margin: EdgeInsets.only(bottom: MediaQuery.of(context).size.height * 0.05 ),
+                  padding: EdgeInsets.only(left: 10),
+                  color: Colors.red,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text("data"),
+                          Text("data")
+                        ],
+                      ),
+                      Text("data")
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ],
     ),
   );
