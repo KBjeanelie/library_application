@@ -174,3 +174,44 @@ Container comentCard (BuildContext context){
     ),
   );
 }
+
+
+Center form(){
+  TextEditingController _nom = TextEditingController();
+  TextEditingController _message = TextEditingController();
+  return Center(
+    child: Column(
+      children: [
+         
+        Container(
+          padding: const EdgeInsets.all(15),
+          child: TextField(
+            controller: _nom,
+            decoration: InputDecoration(
+              labelText: 'Votre nom',
+              enabledBorder: OutlineInputBorder(
+                borderSide: const BorderSide(width: 3, color: Colors.blueAccent),
+                borderRadius: BorderRadius.circular(10)
+              )
+            ),
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.all(15),
+          child: TextField(
+            controller: _message,
+            minLines: 3,
+            maxLines: 7,
+            decoration: InputDecoration(
+              labelText: 'Messages',
+              enabledBorder: OutlineInputBorder(
+                borderSide: const BorderSide(width: 3, color: Colors.blueAccent),
+                borderRadius: BorderRadius.circular(10)
+              )
+            ),
+          ),
+        )
+      ]
+    ),
+  );
+}

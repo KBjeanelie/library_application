@@ -9,6 +9,7 @@ import 'package:library_application/Pages/profile_worker_view.dart';
 import 'package:library_application/Pages/search.dart';
 
 import 'Pages/home.dart';
+import 'Pages/publier_offres.dart';
 
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfileWorkerView(),
+      home: AddOffer(),
     );
   }
 }
